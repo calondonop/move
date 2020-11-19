@@ -1,0 +1,9 @@
+<form *ngIf="form" [formGroup]="form" class="form-group">
+  <br><label for="file"><b>Ingrese número de cédula: </b></label><br>
+  <input type="text" formControlName="id"><br><br>
+  <label for="file"><b>Seleccione un archivo de entrada:</b></label><br>
+  <input type="file"
+         id="file"
+         (change)="handleFileInput($event.target.files)"><br>
+  <button (click)="uploadFileToActivity()" class="save-button">Guardar</button>
+</form>
